@@ -45,4 +45,28 @@
   + vCPU: 4 vCPU
   + RAM: 16 GiB
   + Lưu trữ cục bộ: 1 x 125 GB NVMe SSD => Phù hợp khi cần tải các tập dữ liệu lớn hoặc các checkpoints của model nhanh chóng.
-  + Chi phí: 0.684 USD/hour, Chi phí vừa phải hơn một số instance cao cấp hơn ví dụ GPUA100  => hợp lý hơn cho việc fine-tune. 
+  + Chi phí: 0.684 USD/hour, Chi phí vừa phải hơn một số instance cao cấp hơn ví dụ GPUA100  => hợp lý hơn cho việc fine-tune.
+
+## 2.2. AMAZON S3
+#### Ex1: Create a standard S3 bucket then upload a text file to that bucket. Send the URL to access the text file to another co-worker. Can they access it? Why/why not? If they cannot, update the configuration to change that. 
+- Create a standard S3 bucket and upload file .txt
+
+  ![image](https://github.com/user-attachments/assets/ff5141e9-484b-4fdb-b808-b8e2df916093)
+  ![image](https://github.com/user-attachments/assets/d59b545c-8dbf-4cf4-a81a-6a46beaaa737)
+
+- Người khác truy cập:
+
+  ![image](https://github.com/user-attachments/assets/b54f0c60-97ff-429c-a7da-db31efa8343a)
+  
+  + Người khác không thể truy cập vào được. Do nguyên tắc "Security by Default". Để bảo vệ tài nguyên người dùng thì AWS S3 setting mọi thứ đều là riêng tư theo mặc định. Khi tạo 1 bucket mới thì AWS sẽ tự động bật "Block all public access", từ chối mọi yêu cầu bên ngoài để đảm bảo không có dữ liệu nào lộ ra. 
+
+- Update configuration:
+  + Tắt `Block all public access`
+    
+  ![image](https://github.com/user-attachments/assets/64981558-21b4-4dda-88bf-5e39e0c369a8)
+
+  ![image](https://github.com/user-attachments/assets/0f552fcd-491f-4c60-bad7-a851bd0930de)
+
+
+
+
