@@ -71,10 +71,24 @@
 
   ![image](https://github.com/user-attachments/assets/3827ac65-695d-4c7b-bb81-67efdb360e72)
 
-- Sau khi update:
-  
+- **Sau khi update:** Có thể truy cập xem được file 
   ![image](https://github.com/user-attachments/assets/0dbc3cbf-fbdc-4c42-9277-2264f6dece48)
 
+#### Ex2: How much does it cost per month to store that text file on S3?
+- Giá lưu trữ S3 Standard tại Region ap-southeast-2 khoảng $0.025/GB/Month
+- File nặng 225 Bytes ~ 0.0000002 GB.
+- Chi phí 1 tháng khoảng `0.0000002 GB * $0.025/GB ≈ $0.000000005`
+  
+#### Ex3: Delete the bucket you just created.
+- Empyty Bucket:
+  
+  ![image](https://github.com/user-attachments/assets/b2674b78-fefe-4ec1-8542-96dd1d0d0b1f)
+
+- Delete Bucket:
+
+  ![image](https://github.com/user-attachments/assets/cd1de7a9-554d-426d-8667-411407b47b3a)
+
+#### Ex4: On PIXTA Stock, we have over 100 million images with multiple sizes. We need to store all of them on S3. Which S3 storage class should we use?
 
 
 
