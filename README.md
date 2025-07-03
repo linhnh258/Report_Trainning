@@ -10,6 +10,7 @@
 - Type: `t2.nano`
 - Region: Asia Pacific (Sydney) ap-southeast-2
 - Price: $0.0073
+  
   ![image](https://github.com/user-attachments/assets/9627cd9e-cd70-4ff3-a0a2-294559bdda9f)
 
 #### Ex3: What is the difference between terminating and stopping an instance? Terminate the newly created instance.
