@@ -26,4 +26,7 @@
   
   ![image](https://github.com/user-attachments/assets/2c16e581-1371-4888-b25f-70dbe911a877)
 
-
+#### Ex4: What is the difference between spot instances and on-demand instances? In which case should we choose a spot/an on-demand instance?
+|| On-demand instance | Spot instance |
+|---|---|---|
+|Mô hình hoạt động|Trả tiền theo tiến trình|Đấu giá dung lựng thừa của AWS|
