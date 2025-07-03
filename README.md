@@ -67,6 +67,15 @@
 
   ![image](https://github.com/user-attachments/assets/0f552fcd-491f-4c60-bad7-a851bd0930de)
 
+  + Edit `Bucket policy`
+
+  ![image](https://github.com/user-attachments/assets/3827ac65-695d-4c7b-bb81-67efdb360e72)
+
+- Sau khi update:
+  
+  ![image](https://github.com/user-attachments/assets/0dbc3cbf-fbdc-4c42-9277-2264f6dece48)
+
+
 
 
 
