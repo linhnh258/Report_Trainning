@@ -89,7 +89,9 @@
   ![image](https://github.com/user-attachments/assets/cd1de7a9-554d-426d-8667-411407b47b3a)
 
 #### Ex4: On PIXTA Stock, we have over 100 million images with multiple sizes. We need to store all of them on S3. Which S3 storage class should we use?
-
-
+- Lựa chọn `S3 Standard` (phù hơp cho cần truy cập nhanh, thường xuyên)
+- Do S3 Standard đảm bảo mỗi bức ảnh được tải với tốc độ nhanh nhất (do Standard cung cấp độ trễ thấp ở mức mili giây), không bao gồm phí truy xuất cho mỗi lần lấy dữ liệu (Ví dụ nếu dùng Standard-IA thì khi xem một bức ảnh sẽ phải trả phí truy xuất nhỏ. Mà với hàng triệu lượt xem mỗi ngày thì phí đó sẽ cộngliệu dồn lại. Còn S3 Standard chỉ chủ yếu là phí lưu trữ, băng thông).
+  
+  Nếu chọn S3 Inntelligent-Tiering thì nó cần phí quản lý và giám sát cho mỗi đối tượng, khi có 100 triệu object thì chi phí đó sẽ cộng dồn và lớn hơn. Bên cạnh đó S3 Standrad-IA và S3 Glacier sẽ yêu cầu phí truy xuất như phân tích ở trước và thời gian chờ lâu hơn S3 Standard. 
 
 
