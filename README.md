@@ -29,4 +29,12 @@
 #### Ex4: What is the difference between spot instances and on-demand instances? In which case should we choose a spot/an on-demand instance?
 || On-demand instance | Spot instance |
 |---|---|---|
-|Mô hình hoạt động|Trả tiền theo tiến trình|Đấu giá dung lựng thừa của AWS|
+|Mô hình hoạt động|Trả tiền theo mức độ sử dụng (pay-as-you-go)|Sử dụng dung lượng máy chủ dư thừa của AWS. Có thể bị lấy lại bất cứ lúc nào với 2 phút cảnh báo trước|
+|Chi phí|Giá cao nếu tính theo giờ, tương đối ổn định|Rất rẻ, giá biến động|
+|Độ tin cậy|Cao, server không bị gián đoạn bởi AWS|Thấp, có thể bị AWS lấy lại bất cứ lúc nào|
+
+###### Các trường hợp nên sử dụng spot/on-demand instance: 
+- On-demand instance: Dùng cho các ứng dụng, tác vụ quan trọng và không thể bị gián đoạn, cho cơ sở dữ liệu hay sử dụng trong môi trường làm việc cần một server ổn định để phát triển. 
+- Spot instance: Dùng khi tiết kiệm chi phí là ưu tiên hàng đầu và ứng dụng có thể chấp nhận sự gián đoạn, hoặc công việc mà dữ liệu bị mất có thể nhanh chóng được phục hồi. Ví dụ có thể sử dụng spot instance cho CI/CD pipeline.
+
+#### Ex5: Our team wants to fine-tune an LLM. We need at least 12GB of GPU memory. Suggest an EC2 instance that we can use.
