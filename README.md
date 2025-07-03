@@ -22,3 +22,8 @@
   + Instance và ổ cứng đi kèm bị xóa vĩnh viễn, không cần phải trả bất cứ chi phí nào tiếp theo. 
   + Không thể lấy lại được, mọi dữ liệu sẽ mất hêt.
 
+* Terminate the newly created instance:
+  
+  ![image](https://github.com/user-attachments/assets/2c16e581-1371-4888-b25f-70dbe911a877)
+
+
