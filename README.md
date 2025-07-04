@@ -107,11 +107,19 @@
 Boto3 đã được cài đặt để tự động tìm đến thư mục `.aws` trên để lấy các thông tin xác thực. Sau đó thì mọi script Boto3 chạy trên máy đã có quyền tương tác với tài khoản AWS. 
 
 #### Ex2: Create start_instance.py to spin up an EC2 instance with the same configuration as section EC2
-- Taọ file code tại `CloudComputing/start_instance.py`
-![image](https://github.com/user-attachments/assets/173c1de2-99ed-4a2e-8ef6-cc8e428912b7)
+- File code tại `CloudComputing/start_instance.py`
+
+  ![image](https://github.com/user-attachments/assets/dacd840d-bd02-4318-9662-182d42c2ead2)
 
 
 #### Ex3: Create terminate_instance.py to terminate the above instance.
+- File code tại `CloudComputing/terminate_instance.py`
+
+  ![image](https://github.com/user-attachments/assets/45a79ba2-2520-4649-89a4-2f2409e5374c)
+
 
 #### Ex4: Create upload_s3.py to upload any file to S3.
+- File code tại `CloudComputing/upload_s3.py`
+
+  ![image](https://github.com/user-attachments/assets/a6c2c0e5-26aa-44cb-8c64-61e24cd664b5)
 
