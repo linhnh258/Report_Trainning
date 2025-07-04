@@ -1,5 +1,5 @@
 # 1. API & DOCKER 
-
+I did the exercises via code and pushed them into the folder `ApiDocker` 
 # 2. CLOUD COMPUTING 
 ## 2.1. AMAZON EC2
 
@@ -149,5 +149,31 @@ Add 2 services:
 2. S3:
    - Storage Class: Chọn `S3 Standard-Infrequent Access` do không cần truy cập thường xuyên, và loại này rẻ hơn `S3 Standard`
    - Storage amount: 2 TB per month
+
+## 2.5. BigQuery 
+#### Ex1: Go to the BigQuery console and create a new dataset called ..._dataset. Load Data into a Table.
+- Dataset: https://www.kaggle.com/datasets/muhammadazam121/student-performance-data
+
+![image](https://github.com/user-attachments/assets/4f0be776-36e7-4478-80ec-78ef87b236aa)
+
+#### Ex2: Create or convert your table my_table into a partitioned table (e.g., by date or ingestion time). Why might partitioning help reduce query costs and improve performance? 
+- Bảng `my_partitioned_table` phân vùng theo
+
+  ![image](https://github.com/user-attachments/assets/51281eb3-ab7f-4037-ba60-dedcddb9dbcf)
+
+- Partitioning giúp giảm cost và imporve performance:
+  + Giảm cost vì khi chạy một câu query và có điều kiện lọc trên cột phân vùng thì sẽ chỉ quẻt trên phân vùng đó, không phải quét trên toàn bộ data nữa. Vì mô hình tính phí của BigQuery dựa trên lượng data được quét, nên quét data ít hơn sẽ dẫn đến chi phí thấp hơn.
+  + Improve performance vì việc chỉ phải đọc và xử lý 1 phần nhỏ của bảng (thay vì xử lý cả bảng) sẽ giúp query đó trả về kết quả nhanh hơn. 
+#### Ex3: Perform a SELECT * query on your partitioned table. Observe the query cost (bytes processed) and how it might change if you query a specific partition. How do query costs differ when filtering by partition vs. scanning the whole table?
+![image](https://github.com/user-attachments/assets/de73a0ce-e050-40fe-b810-335269e0c400)
+![image](https://github.com/user-attachments/assets/a6f0ff92-a665-48dc-9293-dd26d9a62e3c)
+
+- Khi chạy `SELECT *` thì chi phí ước tính bằng với tổng kích thước của bảng. Còn khi chạy có kèm theo điều kiện `WHERE` thì chi phí ước tính lọc theo phân vùng cụ thể sẽ bằng với phân vùng đó. (Hiện tại ở đây chi phí giống nhau do lọc theo date là ngày hôm nay (current date), tuy nhiên mọi data đều có date là current day).
+- Khi quét toàn bộ bảng, chi phí bằng tổng kích thước của toàn bộ bảng nên sẽ tốn kém và chậm hơn.
+- Khi lọc theo phân vùng thì chi phí bằng tổng kích thước của phân vùng đực chỉ định trong mệnh đề `WHERE`. BigQurey sẽ prune tất cả các phân vùng không liên quan nên sẽ giảm đáng kể lượng dữ liệu cần đọc, tiết kiệm được cost và tăng tốc độ truy vấn. 
+
+#### Ex4: Delete the table and dataset to avoid unnecessary charges.
+![image](https://github.com/user-attachments/assets/2837b382-7376-44bd-a289-b2e99c0f623b)
+
 
 
