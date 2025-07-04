@@ -97,13 +97,19 @@
 ## BOTO 3
 #### Ex1: Install boto3 and configure access to AWS resources. 
 1. Cài đặt boto3
+   
    ` pip install boto3 `
 2. Cấu hình quyền truy cập (Configure Access)
    - Lấy Access Key ID và Secret Access Key
    - Cài đặt AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-   - Cấu hình: Chạy lệnh `aws configure`
+   - Cấu hình: Chạy lệnh `aws configure`. Lệnh này sẽ tự động tạo một thư mục `.aws` trong home và lưu các thông tin vào đó.
+
+Boto3 đã được cài đặt để tự động tìm đến thư mục `.aws` trên để lấy các thông tin xác thực. Sau đó thì mọi script Boto3 chạy trên máy đã có quyền tương tác với tài khoản AWS. 
 
 #### Ex2: Create start_instance.py to spin up an EC2 instance with the same configuration as section EC2
+- Taọ file code tại `CloudComputing/start_instance.py`
+![image](https://github.com/user-attachments/assets/173c1de2-99ed-4a2e-8ef6-cc8e428912b7)
+
 
 #### Ex3: Create terminate_instance.py to terminate the above instance.
 
