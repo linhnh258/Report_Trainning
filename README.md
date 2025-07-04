@@ -94,4 +94,18 @@
   
   Nếu chọn S3 Inntelligent-Tiering thì nó cần phí quản lý và giám sát cho mỗi đối tượng, khi có 100 triệu object thì chi phí đó sẽ cộng dồn và lớn hơn. Bên cạnh đó S3 Standrad-IA và S3 Glacier sẽ yêu cầu phí truy xuất như phân tích ở trước và thời gian chờ lâu hơn S3 Standard. 
 
+## BOTO 3
+#### Ex1: Install boto3 and configure access to AWS resources. 
+1. Cài đặt boto3
+   ` pip install boto3 `
+2. Cấu hình quyền truy cập (Configure Access)
+   - Lấy Access Key ID và Secret Access Key
+   - Cài đặt AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+   - Cấu hình: Chạy lệnh `aws configure`
+
+#### Ex2: Create start_instance.py to spin up an EC2 instance with the same configuration as section EC2
+
+#### Ex3: Create terminate_instance.py to terminate the above instance.
+
+#### Ex4: Create upload_s3.py to upload any file to S3.
 
