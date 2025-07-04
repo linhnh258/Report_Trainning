@@ -94,7 +94,7 @@
   
   Nếu chọn S3 Inntelligent-Tiering thì nó cần phí quản lý và giám sát cho mỗi đối tượng, khi có 100 triệu object thì chi phí đó sẽ cộng dồn và lớn hơn. Bên cạnh đó S3 Standrad-IA và S3 Glacier sẽ yêu cầu phí truy xuất như phân tích ở trước và thời gian chờ lâu hơn S3 Standard. 
 
-## BOTO 3
+## 2.3. BOTO 3
 #### Ex1: Install boto3 and configure access to AWS resources. 
 1. Cài đặt boto3
    
@@ -122,4 +122,32 @@ Boto3 đã được cài đặt để tự động tìm đến thư mục `.aws`
 - File code tại `CloudComputing/upload_s3.py`
 
   ![image](https://github.com/user-attachments/assets/a6c2c0e5-26aa-44cb-8c64-61e24cd664b5)
+
+## 2.4. AWS Cost Estimation
+#### Quiz: 
+- Use AWS pricing calculator to estimate the monthly cost for the following resources:
+  + 01 EC2 instance with at least 12GB of GPU, 16GB of RAM, and 100GB of storage
+  + 01 standard S3 bucket that stores 2TB of data
+- Other information:
+  + We crawl 2GB of data from the Internet every day from the EC2 instance
+  + We do not access the S3 bucket frequently
+  + All resources must be in the Tokyo region
+
+#### Practice: 
+![image](https://github.com/user-attachments/assets/097b1181-01b2-47db-a009-eea0fda0c77c)
+
+Add 2 services: 
+1. EC2:
+   - Instance: `g4dn.xlarge`
+     + 16GB GPU (thỏa mãn ít nhất 12GB GPU)
+     + 16 GiB RAM
+   - Cấu hình EBS:
+     + Storage type: gp3
+     + Storage amount: 100 GB 
+   - Data Transfer:
+     + nbound Data Transfer: Lựa chọn Internet, chọn 60 GB per month
+2. S3:
+   - Storage Class: Chọn `S3 Standard-Infrequent Access` do không cần truy cập thường xuyên, và loại này rẻ hơn `S3 Standard`
+   - Storage amount: 2 TB per month
+
 
